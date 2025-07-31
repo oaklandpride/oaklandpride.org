@@ -1,0 +1,24 @@
+title: Oakland Pride
+email: info@oaklandpride.org
+description: Celebrating the LGBTQ+ community in Oakland, California.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "oaklandpride.org" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: oaklandpride
+github_username:  oaklandpride
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
