@@ -12,14 +12,20 @@ $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
 
-$primary: #6d7eef;
-// $secondary: $gray-600;
+$cyclamen: hsla(337, 100%, 72%, 1);
+$xanthous: hsla(43, 90%, 54%, 1);
+$honolulu-blue: hsla(201, 85%, 38%, 1);
+$thistle: hsla(327, 38%, 82%, 1);
+$bistre: hsla(28, 28%, 13%, 1);
+
+$primary: $honolulu-blue;
+$secondary: $thistle;
 $success: $green;
 $info: $cyan;
-$warning: #efb06d;
-$danger: $red;
-// $light: $gray-100;
-$dark: #483521;
+$warning: $xanthous;
+$danger: $cyclamen;
+// $light: $thistle;
+$dark: $bistre;
 
 
 @import "bootstrap";
