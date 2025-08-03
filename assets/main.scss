@@ -1,31 +1,53 @@
 ---
 ---
 
-$primary: #6D7EEF;
-$secondary: #483521;
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+$primary: #6d7eef;
+// $secondary: $gray-600;
+$success: $green;
+$info: $cyan;
 $warning: #efb06d;
+$danger: $red;
+// $light: $gray-100;
+$dark: #483521;
 
-@import 'bootstrap';
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "bootstrap";
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 .font-gilbert {
-    font-family: "gilbert", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "gilbert", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.font-neue-haas-unica {
+  font-family: "neue-haas-unica", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
+
 .font-gilbert-color {
-    font-family: "gilbert-color", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "gilbert-color", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .font-groupie-gloss {
-    font-family: "groupie-gloss", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "groupie-gloss", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .font-groupie {
@@ -34,13 +56,24 @@ $warning: #efb06d;
   font-style: normal;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: "gilbert", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "gilbert", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-a, p, li, span, div, input, button {
+a,
+p,
+li,
+span,
+div,
+input,
+button {
   font-family: "Lato", sans-serif;
   font-style: normal;
 }
