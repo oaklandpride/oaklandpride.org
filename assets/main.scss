@@ -2,3 +2,40 @@
 ---
 
 @import 'bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.font-gilbert {
+    font-family: "gilbert", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-gilbert-color {
+    font-family: "gilbert-color", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-groupie-gloss {
+    font-family: "groupie-gloss", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-groupie {
+  font-family: "groupie-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "gilbert", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a, p, li, span, div, input, button {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+}
