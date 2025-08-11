@@ -91,9 +91,20 @@ button {
 }
 
 #video-background-1 {
-  background: url('https://storage.googleapis.com/oaklandpride-archive/video-background-1.mp4') no-repeat center center fixed;
-  background-size: cover;
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
 .text-outline {
@@ -107,6 +118,8 @@ button {
   -webkit-backdrop-filter: blur(3.33px); /* For Safari support */
   /* Make the background transparent */
   background-color: rgba(255, 255, 255, 0.3); /* Example: 30% white */
+  position: relative;
+  z-index: 1;
 }
 
 .bg-gradient-1 {
