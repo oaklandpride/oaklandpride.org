@@ -156,3 +156,33 @@ button {
   background-position: center;
   min-height: 100px;
 }
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: #f00;
+  opacity: 0; /* Start as invisible until animation begins */
+  
+  /* The new, improved animation */
+  animation: burst-and-fall 3s ease-out forwards;
+}
+
+@keyframes burst-and-fall {
+  /* 0% - 20%: The "burst" phase */
+  0% {
+    transform: translate(0, 0) rotateZ(0deg);
+    opacity: 1;
+  }
+  20% {
+    /* Move to the random burst location set by JS */
+    transform: translate(var(--burst-x), var(--burst-y)) rotateZ(360deg);
+    opacity: 1;
+  }
+  /* 20% - 100%: The "fall" phase */
+  100% {
+    /* Fall downwards from the burst location */
+    transform: translate(var(--burst-x), 100vh) rotateZ(720deg);
+    opacity: 0;
+  }
+}

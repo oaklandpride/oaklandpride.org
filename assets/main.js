@@ -33,3 +33,45 @@ const interval = setInterval(function () {
     countdownElement.innerHTML = "EXPIRED";
   }
 }, 1000); // 1000ms = 1 second
+
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('confetti-button');
+  
+  button.addEventListener('click', () => {
+    const confettiCount = 100;
+    const colors = ['#f94144', '#f3722c', '#f8961e', '#f9c74f', '#90be6d', '#43aa8b', '#577590'];
+
+    for (let i = 0; i < confettiCount; i++) {
+      const confettiPiece = document.createElement('div');
+      confettiPiece.classList.add('confetti-piece');
+      
+      const buttonRect = button.getBoundingClientRect();
+      // Start all pieces at the center of the button
+      confettiPiece.style.left = `${buttonRect.left + buttonRect.width / 2}px`;
+      confettiPiece.style.top = `${buttonRect.top + buttonRect.height / 2}px`;
+      
+      confettiPiece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      
+      // --- THE FIX IS HERE ---
+      // Calculate a random circular burst pattern
+      const angle = Math.random() * 2 * Math.PI; // Random angle
+      const distance = Math.random() * 150 + 50;  // Random distance from 50px to 200px
+      
+      const burstX = Math.cos(angle) * distance;
+      const burstY = Math.sin(angle) * distance;
+
+      // Set the custom properties for the CSS animation
+      confettiPiece.style.setProperty('--burst-x', `${burstX}px`);
+      confettiPiece.style.setProperty('--burst-y', `${burstY}px`);
+      // --- END OF FIX ---
+      
+      confettiPiece.style.animationDelay = `${Math.random() * 0.2}s`;
+      
+      document.body.appendChild(confettiPiece);
+      
+      setTimeout(() => {
+        confettiPiece.remove();
+      }, 3000);
+    }
+  });
+});
