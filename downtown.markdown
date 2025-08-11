@@ -13,6 +13,9 @@ The history of Downtown Oakland is deeply connected to the city's development. F
 
 Just steps away stands the magnificent Oakland City Hall, a Beaux-Arts masterpiece completed in 1914. At 320 feet tall, it was once the tallest building west of the Mississippi River. Its grand architecture and central location symbolize the city's governance and its enduring strength. The surrounding streets, like Broadway, have been central to Oakland's commercial life for over a century, evolving from a bustling hub of department stores and theaters to a diverse district of modern businesses, restaurants, and cultural venues.
 
+{: .bg-tinypeople}
+.
+
 {: .bg-secondary-subtle .p-3}
 ## Businesses and Attractions
 

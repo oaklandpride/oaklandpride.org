@@ -103,3 +103,56 @@ button {
   /* Make the background transparent */
   background-color: rgba(255, 255, 255, 0.3); /* Example: 30% white */
 }
+
+.gradient-bar {
+  /* Set a height for the bar */
+  height: 69px;
+  
+  /* Remove the default border */
+  border: 0;
+  
+  /* Create the colorful gradient */
+  background-image: linear-gradient(
+    to right, 
+    #7B2DFF, /* Purple */
+    #FF00A8, /* Pink */
+    #FF7B00  /* Orange */
+  );
+}
+
+.faded-bar {
+  height: 200px;
+  border: 0;
+  background-image: linear-gradient(
+    to right, 
+    transparent, 
+    #6366F1, /* Indigo color in the middle */
+    transparent
+  );
+}
+
+.striped-bar {
+  height: 33px;
+  border: 0;
+  // rotate: -2.69deg;
+  background-image: repeating-linear-gradient(
+    45deg,          /* The angle of the stripes */
+    #3B82F6 0px,     /* Blue */
+    #3B82F6 25px,     /* Blue, up to 25px */
+    #A855F7 25px,     /* Purple, starting at 25px */
+    #A855F7 50px      /* Purple, up to 50px */
+  );
+}
+.bg-hearttree {
+  background-image: url('https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/8977405e-31bb-41c5-e076-b1642dfa6800/public');
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+}
+
+.bg-tinypeople {
+  background-image: url('https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/b6d8b81a-ec50-4459-1dfe-ae5ec7b88600/public');
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+}
