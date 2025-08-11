@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col col-12">
+        <h2>Our Generous Sponsors</h2>
+    </div>
+    {% for sponsor in site.data.sponsors %}
+    <div class="col">
+        <a href="{{ sponsor.link }}" target="_blank">
+            <img class="img-fluid" src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+        </a>
+    </div>
+    {% endfor %}
+    <div class="col col-12">
+        <h2>Become a Sponsor</h2>
+        <p>If you're interested in supporting Oakland Pride, we'd love to hear from you! Please <a href="/sponsorship/">get in touch</a> to learn more about sponsorship opportunities.</p>
+    </div>
+</div>
