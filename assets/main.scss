@@ -27,10 +27,11 @@ $danger: $cyclamen;
 // $light: $thistle;
 $dark: $bistre;
 
-
 @import "bootstrap";
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap");
 
 body {
   overflow-x: hidden !important;
@@ -42,12 +43,12 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
 .font-neue-haas-unica {
   font-family: "neue-haas-unica", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 
 .font-gilbert-color {
   font-family: "gilbert-color", sans-serif;
@@ -65,6 +66,10 @@ body {
   font-family: "groupie-regular", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
 
 h1,
@@ -85,7 +90,7 @@ span,
 div,
 input,
 button {
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 1.3rem;
 }
@@ -107,62 +112,44 @@ button {
   z-index: 0;
 }
 
-.text-outline {
-  color: whitesmoke; /* The fill color of the text */
-  -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: black;
-}
 .blur-background {
-  /* The backdrop-filter property */
   backdrop-filter: blur(3.33px);
-  -webkit-backdrop-filter: blur(3.33px); /* For Safari support */
-  /* Make the background transparent */
-  background-color: rgba(255, 255, 255, 0.3); /* Example: 30% white */
+  -webkit-backdrop-filter: blur(3.33px);
+  background-color: rgba(255, 255, 255, 0.3);
   position: relative;
   z-index: 1;
 }
 
 .bg-gradient-1 {
-  background-image: linear-gradient(
-    to right, 
-    #7B2DFF, /* Purple */
-    #FF00A8, /* Pink */
-    #FF7B00  /* Orange */
-  );
+  background-image: linear-gradient(to right, #7b2dff, #ff00a8, #ff7b00);
 }
 
 .faded-bar {
   height: 200px;
   border: 0;
-  background-image: linear-gradient(
-    to right, 
-    transparent, 
-    #6366F1, /* Indigo color in the middle */
-    transparent
-  );
+  background-image: linear-gradient(to right, transparent, #6366f1, transparent);
 }
 
 .striped-bar {
   height: 33px;
   border: 0;
-  // rotate: -2.69deg;
   background-image: repeating-linear-gradient(
-    45deg,          /* The angle of the stripes */
-    #3B82F6 0px,     /* Blue */
-    #3B82F6 25px,     /* Blue, up to 25px */
-    #A855F7 25px,     /* Purple, starting at 25px */
-    #A855F7 50px      /* Purple, up to 50px */
+    45deg,
+    #3b82f6 0px,
+    #3b82f6 25px,
+    #a855f7 25px,
+    #a855f7 50px
   );
 }
 .bg-hearttree {
-  background-image: url('https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/8977405e-31bb-41c5-e076-b1642dfa6800/public');
+  background-image: url("https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/8977405e-31bb-41c5-e076-b1642dfa6800/public");
   background-size: cover;
   background-position: center;
   min-height: 100px;
 }
 
 .bg-tinypeople {
-  background-image: url('https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/b6d8b81a-ec50-4459-1dfe-ae5ec7b88600/public');
+  background-image: url("https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/b6d8b81a-ec50-4459-1dfe-ae5ec7b88600/public");
   background-size: cover;
   background-position: center;
   min-height: 100px;
@@ -174,7 +161,7 @@ button {
   height: 20px;
   background-color: #f00;
   opacity: 0; /* Start as invisible until animation begins */
-  
+
   /* The new, improved animation */
   animation: burst-and-fall 3s ease-out forwards;
 }
@@ -196,4 +183,38 @@ button {
     transform: translate(var(--burst-x), 100vh) rotateZ(720deg);
     opacity: 0;
   }
+}
+
+.brush-stroke-text {
+  position: relative;
+  z-index: 1;
+}
+
+.brush-stroke-text::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  $white: #ffffff;
+  $light-blue: #9bcef9;
+  $pink: #f5a9b8;
+
+  background-image: linear-gradient(
+    99deg,    
+    rgba($pink, 0.9),
+    rgba($white, 0.99),
+    rgba($light-blue, 0.99)
+  );
+
+  /* Position and size the stroke */
+  top: -10%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+
+  /* Create the organic, brush-like shape */
+  border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+
+  /* Add a slight rotation for a more dynamic feel */
+  transform: rotate(-2deg);
 }
