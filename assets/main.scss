@@ -104,14 +104,7 @@ button {
   background-color: rgba(255, 255, 255, 0.3); /* Example: 30% white */
 }
 
-.gradient-bar {
-  /* Set a height for the bar */
-  height: 69px;
-  
-  /* Remove the default border */
-  border: 0;
-  
-  /* Create the colorful gradient */
+.bg-gradient-1 {
   background-image: linear-gradient(
     to right, 
     #7B2DFF, /* Purple */
