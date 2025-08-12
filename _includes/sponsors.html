@@ -1,16 +1,41 @@
-<div class="row">
+{% assign sponsors = site.data.sponsors %}
+{% assign sponsors_1 = sponsors | where: "level", "1 - Presenting" %}
+{% assign sponsors_2 = sponsors | where: "level", "2 - Gold" %}
+{% assign sponsors_3 = sponsors | where: "level", "3 - Participating" %}
+{% assign sponsors_4 = sponsors | where: "level", "4 - In-Kind" %}
+
+<div class="container-fluid">
+<div id="sponsors" class="row align-items-center align-content-center justify-content-evenly p-md-5 text-center">
     <div class="col col-12">
         <h2>Our Generous Sponsors</h2>
     </div>
-    {% for sponsor in site.data.sponsors %}
-    <div class="col">
-        <a href="{{ sponsor.link }}" target="_blank">
+    {% for sponsor in sponsors_1 %}
+    <div class="col col-6 p-5">
+        <a href="{% if sponsor.link != blank?%}{{ sponsor.link }}{% else %}#sponsors{% endif %}" target="_blank">
             <img class="img-fluid" src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
         </a>
     </div>
     {% endfor %}
-    <div class="col col-12">
-        <h2>Become a Sponsor</h2>
-        <p>If you're interested in supporting Oakland Pride, we'd love to hear from you! Please <a href="/sponsorship/">get in touch</a> to learn more about sponsorship opportunities.</p>
+    {% for sponsor in sponsors_2 %}
+    <div class="col col-4 p-5">
+        <a href="{% if sponsor.link != blank?%}{{ sponsor.link }}{% else %}#sponsors{% endif %}" target="_blank">
+            <img class="img-fluid" src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+        </a>
     </div>
+    {% endfor %}
+    {% for sponsor in sponsors_3 %}
+    <div class="col col-4 col-md-3 p-5">
+        <a href="{% if sponsor.link != blank?%}{{ sponsor.link }}{% else %}#sponsors{% endif %}" target="_blank">
+            <img class="img-fluid" src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+        </a>
+    </div>
+    {% endfor %}
+    {% for sponsor in sponsors_4 %}
+    <div class="col col-4 col-md-2 p-5">
+        <a href="{% if sponsor.link != blank?%}{{ sponsor.link }}{% else %}#sponsors{% endif %}" target="_blank">
+            <img class="img-fluid" src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+        </a>
+    </div>
+    {% endfor %}
+</div>
 </div>
