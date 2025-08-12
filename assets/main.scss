@@ -27,6 +27,20 @@ $danger: $cyclamen;
 // $light: $thistle;
 $dark: $bistre;
 
+@mixin trans-flag-gradient($angle: 90deg) {
+  background: linear-gradient($angle, 
+    #5bcefa, 
+    #5bcefa 20%, 
+    #f5a9b8 20%, 
+    #f5a9b8 40%, 
+    #ffffff 40%, 
+    #ffffff 60%, 
+    #f5a9b8 60%, 
+    #f5a9b8 80%, 
+    #5bcefa 80%, 
+    #5bcefa);
+}
+
 @import "bootstrap";
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
@@ -195,16 +209,7 @@ button {
   position: absolute;
   z-index: -1;
 
-  $white: #ffffff;
-  $light-blue: #9bcef9;
-  $pink: #f5a9b8;
-
-  background-image: linear-gradient(
-    99deg,    
-    rgba($pink, 0.9),
-    rgba($white, 0.99),
-    rgba($light-blue, 0.99)
-  );
+  @include trans-flag-gradient(135deg);
 
   /* Position and size the stroke */
   top: -10%;
