@@ -27,6 +27,17 @@ $danger: $cyclamen;
 // $light: $thistle;
 $dark: $bistre;
 
+@mixin asexual-flag-gradient($angle: 90deg) {
+  background: linear-gradient($angle, 
+    #000000 25%, 
+    #a3a3a3 25%, 
+    #a3a3a3 50%, 
+    #ffffff 50%, 
+    #ffffff 75%, 
+    #800080 75%, 
+    #800080);
+}
+
 @mixin trans-flag-gradient($angle: 90deg) {
   background: linear-gradient($angle, 
     #5bcefa, 
@@ -39,6 +50,16 @@ $dark: $bistre;
     #f5a9b8 80%, 
     #5bcefa 80%, 
     #5bcefa);
+}
+
+@mixin traditional-rainbow-gradient($angle: 90deg) {
+  background: linear-gradient($angle, 
+    #ff0000, 
+    #ff8c00, 
+    #ffff00, 
+    #008026, 
+    #0000ff, 
+    #800080);
 }
 
 @import "bootstrap";
@@ -222,4 +243,48 @@ button {
 
   /* Add a slight rotation for a more dynamic feel */
   transform: rotate(-2deg);
+}
+
+.btn-rainbow {
+  @include traditional-rainbow-gradient(135deg);
+}
+
+// Define the color palettes
+$rainbow-colors: #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3;
+$trans-colors: #5bcefa, #f5a9b8, #ffffff, #f5a9b8, #5bcefa;
+
+// Combine the color palettes and duplicate them to create a seamless loop
+// The first and last colors of the combined gradient must match for a smooth loop
+$combined-colors-loop: $rainbow-colors, $trans-colors, $rainbow-colors, $trans-colors;
+
+// Set the animation duration
+$animation-duration: 8s;
+
+// Keyframes for a smooth, progressive text animation
+@keyframes progressive-text-loop {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 50%; // Animate only halfway
+  }
+}
+
+.progressive-gradient {
+  font-size: 4rem;
+  font-weight: bold;
+  
+  // Create the linear gradient from the duplicated color palette
+  background: linear-gradient(90deg, $combined-colors-loop);
+  
+  // Set the background size to be much wider than the text
+  background-size: 400% 100%; // Doubled the size to accommodate the duplicated colors
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  color: transparent;
+  
+  // Apply the animation with the new keyframes
+  animation: progressive-text-loop $animation-duration linear infinite;
 }
