@@ -75,3 +75,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+function showFullscreen(imgElement) {
+    // Create the overlay div
+    const overlay = document.createElement('div');
+    
+    // Style the overlay
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.zIndex = '1000';
+    overlay.style.cursor = 'pointer';
+
+    // Create the image element for the fullscreen view
+    const fullscreenImage = document.createElement('img');
+    fullscreenImage.src = imgElement.src;
+    
+    // Style the fullscreen image
+    fullscreenImage.style.maxWidth = '90%';
+    fullscreenImage.style.maxHeight = '90%';
+    fullscreenImage.style.objectFit = 'contain';
+
+    // Add the image to the overlay
+    overlay.appendChild(fullscreenImage);
+
+    // Add the overlay to the document body
+    document.body.appendChild(overlay);
+
+    // Add an event listener to the overlay to remove it when clicked
+    overlay.onclick = function() {
+        document.body.removeChild(overlay);
+    };
+}
