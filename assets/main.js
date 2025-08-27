@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
 // Set the date we're counting down to.
 // The format is "Month Day, Year HH:MM:SS"
-const countDownDate = new Date("Sep 7, 2025 00:11:00").getTime();
+const countDownDate = new Date("2025-09-07T11:00:00").getTime();
 
 // --- SCRIPT LOGIC ---
 // Get the element where the countdown will be displayed.
@@ -18,7 +18,7 @@ const interval = setInterval(function () {
   // Time calculations for days, hours, minutes and seconds.
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="countdown".
@@ -30,7 +30,7 @@ const interval = setInterval(function () {
   // If the count down is finished, write some text.
   if (distance < 0) {
     clearInterval(interval);
-    countdownElement.innerHTML = "EXPIRED";
+    countdownElement.innerHTML = "Happy Pride!";
   }
 }, 1000); // 1000ms = 1 second
 
