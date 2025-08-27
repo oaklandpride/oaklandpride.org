@@ -20,7 +20,6 @@ $thistle: hsla(327, 38%, 82%, 1); // Thistle purple
 $bistre: hsla(28, 28%, 13%, 1); // Bistre brown
 $red: #dc3545;
 
-// Semantic color assignments for theme
 $primary: $honolulu-blue;
 $secondary: $thistle;
 $success: $green;
@@ -102,8 +101,6 @@ body {
 }
 
 .font-groupie {
-// Main text and UI elements use Inter for readability
-a,
   font-family: "groupie-regular", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -115,7 +112,6 @@ a,
 
 h1,
 h2,
-// Video background section styles
 h3,
 h4,
 h5,
@@ -141,7 +137,6 @@ button {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-// Gradient backgrounds for hero sections and bars
 }
 
 .bg-video {
@@ -235,33 +230,23 @@ button {
   position: relative;
   z-index: 1;
 }
-// Button with rainbow gradient background
 
 .brush-stroke-text::before {
   content: "";
   position: absolute;
-// Define color palettes for progressive gradient text animation
   z-index: -1;
 
   @include trans-flag-gradient(135deg);
-
-  /* Position and size the stroke */
   top: -10%;
   left: -5%;
   width: 110%;
   height: 110%;
-
-// Keyframes for a smooth, progressive text animation
-  /* Create the organic, brush-like shape */
   border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
-
-  /* Add a slight rotation for a more dynamic feel */
   transform: rotate(-2deg);
 }
 
 .btn-rainbow {
   @include traditional-rainbow-gradient(135deg);
-// Progressive gradient text effect for main logo or hero text
 }
 
 $rainbow-colors: #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3;
@@ -289,9 +274,20 @@ $animation-duration: 8s;
   animation: progressive-text-loop $animation-duration linear infinite;
 }
 
-#pre-header{
+.no-wrap-shrink {
+  // Prevents the text from wrapping onto a new line.
   white-space: nowrap;
+
+  // Hides any part of the text that still overflows its container.
   overflow: hidden;
+
+  // Adds an ellipsis "..." to indicate that the text has been cut off.
   text-overflow: ellipsis;
+
+  // This is the key part for responsive shrinking.
+  // clamp(MINIMUM_SIZE, PREFERRED_SIZE, MAXIMUM_SIZE)
+  // - The font will try to be 4vw (4% of the viewport width).
+  // - It will not shrink smaller than 1rem.
+  // - It will not grow larger than 2.5rem.
   font-size: clamp(1rem, 4vw, 2.5rem);
 }
