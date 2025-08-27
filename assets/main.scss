@@ -1,10 +1,5 @@
 ---
 ---
-
-
-// Oakland Pride main SCSS stylesheet
-// This file defines color variables, gradients, font families, and custom styles for the site.
-// Comments are provided throughout to explain each section and key styles.
 $purple: #6f42c1;
 $blue: #0d6efd; // Bootstrap blue
 $indigo: #6610f2; // Bootstrap indigo
@@ -17,35 +12,15 @@ $green: #198754; // Bootstrap green
 $teal: #20c997; // Bootstrap teal
 $cyan: #0dcaf0; // Bootstrap cyan
 $pink: #d63384;
-// Custom color palette for Oakland Pride
+
 $cyclamen: hsla(337, 100%, 72%, 1); // Cyclamen pink
 $xanthous: hsla(43, 90%, 54%, 1); // Xanthous yellow
 $honolulu-blue: hsla(201, 85%, 38%, 1); // Honolulu blue
 $thistle: hsla(327, 38%, 82%, 1); // Thistle purple
 $bistre: hsla(28, 28%, 13%, 1); // Bistre brown
 $red: #dc3545;
+
 // Semantic color assignments for theme
-$primary: $honolulu-blue;
-$secondary: $thistle;
-$success: $green;
-$info: $cyan;
-$warning: $xanthous;
-$danger: $cyclamen;
-// $light: $thistle;
-$dark: $bistre;
-$orange: #fd7e14;
-// Pride flag gradients as mixins
-$yellow: #ffc107;
-$green: #198754;
-$teal: #20c997;
-$cyan: #0dcaf0;
-
-$cyclamen: hsla(337, 100%, 72%, 1);
-$xanthous: hsla(43, 90%, 54%, 1);
-$honolulu-blue: hsla(201, 85%, 38%, 1);
-$thistle: hsla(327, 38%, 82%, 1);
-$bistre: hsla(28, 28%, 13%, 1);
-
 $primary: $honolulu-blue;
 $secondary: $thistle;
 $success: $green;
@@ -70,21 +45,17 @@ $dark: $bistre;
   background: linear-gradient($angle, 
     #5bcefa, 
     #5bcefa 20%, 
-// Import Bootstrap for base styles and components
     #f5a9b8 20%, 
     #f5a9b8 40%, 
-// Import Google Fonts for site typography
     #ffffff 40%, 
     #ffffff 60%, 
     #f5a9b8 60%, 
     #f5a9b8 80%, 
-// Global body styles
     #5bcefa 80%, 
     #5bcefa);
 }
 
 @mixin traditional-rainbow-gradient($angle: 90deg) {
-// Custom font classes for branding and headings
   background: linear-gradient($angle, 
     #ff0000, 
     #ff8c00, 
@@ -334,20 +305,9 @@ $animation-duration: 8s;
   animation: progressive-text-loop $animation-duration linear infinite;
 }
 
-
 #pre-header{
-  // Prevents the text from wrapping onto a new line.
   white-space: nowrap;
-
-  // Hides any part of the text that still overflows its container.
   overflow: hidden;
-
-  // Adds an ellipsis "..." to indicate that the text has been cut off.
   text-overflow: ellipsis;
-
-  // clamp(MINIMUM_SIZE, PREFERRED_SIZE, MAXIMUM_SIZE)
-  // - The font will try to be 4vw (4% of the viewport width).
-  // - It will not shrink smaller than 1rem.
-  // - It will not grow larger than 2.5rem.
   font-size: clamp(1rem, 4vw, 2.5rem);
 }
