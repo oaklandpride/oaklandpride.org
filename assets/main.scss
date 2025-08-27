@@ -1,12 +1,40 @@
 ---
 ---
 
-$blue: #0d6efd;
-$indigo: #6610f2;
+
+// Oakland Pride main SCSS stylesheet
+// This file defines color variables, gradients, font families, and custom styles for the site.
+// Comments are provided throughout to explain each section and key styles.
 $purple: #6f42c1;
+$blue: #0d6efd; // Bootstrap blue
+$indigo: #6610f2; // Bootstrap indigo
+$purple: #6f42c1; // Bootstrap purple
+$pink: #d63384; // Bootstrap pink
+$red: #dc3545; // Bootstrap red
+$orange: #fd7e14; // Bootstrap orange
+$yellow: #ffc107; // Bootstrap yellow
+$green: #198754; // Bootstrap green
+$teal: #20c997; // Bootstrap teal
+$cyan: #0dcaf0; // Bootstrap cyan
 $pink: #d63384;
+// Custom color palette for Oakland Pride
+$cyclamen: hsla(337, 100%, 72%, 1); // Cyclamen pink
+$xanthous: hsla(43, 90%, 54%, 1); // Xanthous yellow
+$honolulu-blue: hsla(201, 85%, 38%, 1); // Honolulu blue
+$thistle: hsla(327, 38%, 82%, 1); // Thistle purple
+$bistre: hsla(28, 28%, 13%, 1); // Bistre brown
 $red: #dc3545;
+// Semantic color assignments for theme
+$primary: $honolulu-blue;
+$secondary: $thistle;
+$success: $green;
+$info: $cyan;
+$warning: $xanthous;
+$danger: $cyclamen;
+// $light: $thistle;
+$dark: $bistre;
 $orange: #fd7e14;
+// Pride flag gradients as mixins
 $yellow: #ffc107;
 $green: #198754;
 $teal: #20c997;
@@ -42,17 +70,21 @@ $dark: $bistre;
   background: linear-gradient($angle, 
     #5bcefa, 
     #5bcefa 20%, 
+// Import Bootstrap for base styles and components
     #f5a9b8 20%, 
     #f5a9b8 40%, 
+// Import Google Fonts for site typography
     #ffffff 40%, 
     #ffffff 60%, 
     #f5a9b8 60%, 
     #f5a9b8 80%, 
+// Global body styles
     #5bcefa 80%, 
     #5bcefa);
 }
 
 @mixin traditional-rainbow-gradient($angle: 90deg) {
+// Custom font classes for branding and headings
   background: linear-gradient($angle, 
     #ff0000, 
     #ff8c00, 
@@ -87,6 +119,7 @@ body {
 
 .font-gilbert-color {
   font-family: "gilbert-color", sans-serif;
+// Headings use Gilbert font for a bold, distinctive look
   font-weight: 700;
   font-style: normal;
 }
@@ -98,6 +131,8 @@ body {
 }
 
 .font-groupie {
+// Main text and UI elements use Inter for readability
+a,
   font-family: "groupie-regular", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -109,6 +144,7 @@ body {
 
 h1,
 h2,
+// Video background section styles
 h3,
 h4,
 h5,
@@ -134,6 +170,7 @@ button {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+// Gradient backgrounds for hero sections and bars
 }
 
 .bg-video {
@@ -155,6 +192,7 @@ button {
   z-index: 1;
 }
 
+// Custom background images for themed sections
 .bg-gradient-1 {
   background-image: linear-gradient(to right, #7b2dff, #ff00a8, #ff7b00);
 }
@@ -169,6 +207,7 @@ button {
   height: 33px;
   border: 0;
   background-image: repeating-linear-gradient(
+// Confetti animation for celebratory effects
     45deg,
     #3b82f6 0px,
     #3b82f6 25px,
@@ -199,6 +238,7 @@ button {
 
   /* The new, improved animation */
   animation: burst-and-fall 3s ease-out forwards;
+// Brush stroke effect for text, using trans flag gradient
 }
 
 @keyframes burst-and-fall {
@@ -224,10 +264,12 @@ button {
   position: relative;
   z-index: 1;
 }
+// Button with rainbow gradient background
 
 .brush-stroke-text::before {
   content: "";
   position: absolute;
+// Define color palettes for progressive gradient text animation
   z-index: -1;
 
   @include trans-flag-gradient(135deg);
@@ -238,6 +280,7 @@ button {
   width: 110%;
   height: 110%;
 
+// Keyframes for a smooth, progressive text animation
   /* Create the organic, brush-like shape */
   border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
 
@@ -247,6 +290,7 @@ button {
 
 .btn-rainbow {
   @include traditional-rainbow-gradient(135deg);
+// Progressive gradient text effect for main logo or hero text
 }
 
 // Define the color palettes
@@ -266,6 +310,7 @@ $animation-duration: 8s;
     background-position: 0% 50%;
   }
   100% {
+// Pre-header text style for responsive, non-wrapping text
     background-position: 50% 50%; // Animate only halfway
   }
 }
@@ -287,4 +332,22 @@ $animation-duration: 8s;
   
   // Apply the animation with the new keyframes
   animation: progressive-text-loop $animation-duration linear infinite;
+}
+
+
+#pre-header{
+  // Prevents the text from wrapping onto a new line.
+  white-space: nowrap;
+
+  // Hides any part of the text that still overflows its container.
+  overflow: hidden;
+
+  // Adds an ellipsis "..." to indicate that the text has been cut off.
+  text-overflow: ellipsis;
+
+  // clamp(MINIMUM_SIZE, PREFERRED_SIZE, MAXIMUM_SIZE)
+  // - The font will try to be 4vw (4% of the viewport width).
+  // - It will not shrink smaller than 1rem.
+  // - It will not grow larger than 2.5rem.
+  font-size: clamp(1rem, 4vw, 2.5rem);
 }
