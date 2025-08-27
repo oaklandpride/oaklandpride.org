@@ -264,44 +264,28 @@ button {
 // Progressive gradient text effect for main logo or hero text
 }
 
-// Define the color palettes
 $rainbow-colors: #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3;
 $trans-colors: #5bcefa, #f5a9b8, #ffffff, #f5a9b8, #5bcefa;
 
-// Combine the color palettes and duplicate them to create a seamless loop
-// The first and last colors of the combined gradient must match for a smooth loop
 $combined-colors-loop: $rainbow-colors, $trans-colors, $rainbow-colors, $trans-colors;
-
-// Set the animation duration
 $animation-duration: 8s;
-
-// Keyframes for a smooth, progressive text animation
 @keyframes progressive-text-loop {
   0% {
     background-position: 0% 50%;
   }
   100% {
-// Pre-header text style for responsive, non-wrapping text
-    background-position: 50% 50%; // Animate only halfway
+    background-position: 50% 50%;
   }
 }
 
 .progressive-gradient {
   font-size: 4rem;
   font-weight: bold;
-  
-  // Create the linear gradient from the duplicated color palette
   background: linear-gradient(90deg, $combined-colors-loop);
-  
-  // Set the background size to be much wider than the text
-  background-size: 400% 100%; // Doubled the size to accommodate the duplicated colors
-  
+  background-size: 400% 100%; 
   background-clip: text;
   -webkit-background-clip: text;
-  
   color: transparent;
-  
-  // Apply the animation with the new keyframes
   animation: progressive-text-loop $animation-duration linear infinite;
 }
 
