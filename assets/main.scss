@@ -918,3 +918,334 @@ section {
     background-size: 200% 100%;
   }
 }
+
+// Contact Cards
+.contact-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--gray-50);
+  border-radius: 1rem;
+  transition: all var(--transition-base);
+  
+  &:hover {
+    background: white;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  i {
+    font-size: 3rem;
+    color: var(--cyclamen);
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Feature List
+.feature-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    
+    i {
+      color: var(--honolulu-blue);
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Accordion Overrides
+.accordion {
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+  
+  .accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+  }
+  
+  .accordion-button {
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.5rem;
+    
+    &:not(.collapsed) {
+      background: transparent;
+      color: var(--honolulu-blue);
+    }
+    
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  
+  .accordion-body {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+// ===== HEADER & FOOTER STYLES =====
+
+// Top Bar
+.top-bar {
+  background: var(--xanthous);
+  font-size: 0.9rem;
+  
+  .top-bar-link {
+    color: var(--bistre);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+    
+    &:hover {
+      color: var(--honolulu-blue);
+    }
+    
+    i {
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+// Navbar
+.navbar {
+  box-shadow: var(--shadow-md);
+  
+  .brand-name {
+    font-family: "gilbert", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  
+  .brand-tagline {
+    font-size: 0.75rem;
+    opacity: 0.9;
+  }
+  
+  .nav-link {
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all var(--transition-fast);
+    
+    &:hover {
+      color: var(--xanthous) !important;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Footer
+.footer-modern {
+  background: linear-gradient(135deg, var(--bistre) 0%, #1a1a1a 100%);
+  color: white;
+  padding: 4rem 0 0;
+  
+  .footer-brand {
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+    }
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      transition: all var(--transition-base);
+      
+      &:hover {
+        background: var(--honolulu-blue);
+        transform: translateY(-3px);
+      }
+    }
+  }
+  
+  .footer-heading {
+    font-family: "gilbert", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--xanthous);
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 0.75rem;
+      
+      a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 1.05rem;
+        transition: all var(--transition-fast);
+        
+        &:hover {
+          color: white;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+    }
+  }
+}
+
+// ===== UTILITY CLASSES =====
+.text-muted {
+  color: #6b7280 !important;
+}
+
+// Ensure consistent section spacing
+section {
+  position: relative;
+}
+
+// ===== SIGNUP FORM =====
+.signup-form-container {
+  padding: 3rem 1.5rem;
+  
+  .signup-icon {
+    font-size: 3.5rem;
+    color: var(--cyclamen);
+    margin-bottom: 1rem;
+  }
+  
+  .signup-title {
+    font-family: "gilbert", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .signup-description {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.signup-form {
+  .form-control-modern {
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+    transition: all var(--transition-base);
+    background: white;
+    
+    &:focus {
+      border-color: var(--honolulu-blue);
+      box-shadow: 0 0 0 4px rgba(4, 118, 168, 0.1);
+      background: white;
+    }
+    
+    &::placeholder {
+      color: #9ca3af;
+    }
+  }
+  
+  .form-floating {
+    > label {
+      padding: 1rem 1.25rem;
+      font-size: 1rem;
+      color: #6b7280;
+      
+      i {
+        margin-right: 0.5rem;
+        color: var(--honolulu-blue);
+      }
+    }
+    
+    > .form-control:focus ~ label,
+    > .form-control:not(:placeholder-shown) ~ label {
+      opacity: 0.7;
+      transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    }
+  }
+  
+  .signup-consent {
+    padding: 1.25rem;
+    background: var(--gray-50);
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--honolulu-blue);
+    
+    p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      
+      i {
+        color: var(--honolulu-blue);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
+  .signup-legal {
+    color: #6b7280;
+    
+    a {
+      color: var(--honolulu-blue);
+      font-weight: 600;
+      transition: color var(--transition-fast);
+      
+      &:hover {
+        color: var(--cyclamen);
+      }
+    }
+  }
+  
+  button[type="submit"] {
+    min-width: 200px;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+// Form responsive
+@media (max-width: 768px) {
+  .signup-form-container {
+    .signup-title {
+      font-size: 2rem;
+    }
+    
+    .signup-description {
+      font-size: 1.1rem;
+    }
+  }
+}
