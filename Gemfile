@@ -14,3 +14,5 @@ gem "jekyll-redirect-from"
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
+
+gem "logger", "~> 1.7"
