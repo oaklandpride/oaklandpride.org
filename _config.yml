@@ -1,6 +1,6 @@
 title: Oakland Pride
 email: info@oaklandpride.org
-description: Celebrating the LGBTQ+ community in Oakland, California.
+description: Celebrating the LGBTQ+ community in Oakland, California. Save the date for Oakland Pride 2026!
 baseurl: ""
 url: "oaklandpride.org"
 website: https://oaklandpride.org
@@ -9,8 +9,8 @@ github_username:  oaklandpride
 
 permalink: /:categories/:year/:month/:day/:title/
 
-pride-theme: "In Unity We Thrive"
-eventdates: "Sept 7 2025"
+pride-theme: "Coming Soon 2026"
+eventdates: "September 2026 - Date TBA"
 
 # Build settings
 plugins:

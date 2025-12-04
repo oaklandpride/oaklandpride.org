@@ -2,56 +2,144 @@
 layout: home
 ---
 <div class="container-fluid p-0">
-<div id="video-background-1" class="row g-0">
+<!-- Hero Section with Video Background -->
+<section id="hero" class="hero-section">
     <video class="bg-video" autoplay muted loop playsinline preload="auto">
         <source src="https://storage.googleapis.com/oaklandpride-archive/video-background-1.mp4" type="video/mp4">
     </video>
-    <div class="col text-center p-5 blur-background">
-            <h1 class="fw-bolder text-uppercase text-primary font-gilbert" style="font-size:3.5rem;text-shadow: 3px 3px 0 rgba(238, 22, 202, 0.5);">New Location!</h1>
-            <h2 class="fs-1 fw-bold text-uppercase font-gilbert" style="font-size:2rem;">tickets on sale now</h2>
-            <p class="fs-1 my-3 text-uppercase fw-bolder text-dark brush-stroke-text">September 7th<br>festival open 12pm-6pm <span class="d-none d-sm-inline">&centerdot;</span><br class="d-sm-none"> parade 11am</p>
-            <div class="btn-group-lg btn-group-vertical">
-                <a id="confetti-button" href="#" class="btn btn-light"><span id="countdown" class="font-gilbert-color fs-1 text-uppercase">OAKLAND PRIDE!</span></a>
-                <a href="/tickets" class="btn btn-lg btn-primary fs-3">Buy Tickets</a>
-                <a class="btn btn-lg btn-secondary fs-3" href="https://eventhub.net/events/2025-Oakland-Pride-Parade_6915" target="_blank">Register for Parade</a>
-                <a class="btn btn-lg btn-danger fs-3" href="https://eventhub.net/events/2025-Oakland-Pride-Festival_6901" target="_blank">Exhibitor / Vendor Registration</a>
-                <a class="btn btn-lg btn-success fs-3" href="/sponsors/">Sponsors & Donors</a>
-                <a class="btn btn-lg btn-warning fs-3" href="https://www.turnout.org/bayareavolunteer/oakland-pride-2025" target="_blank">Volunteer Registration</a>
+    <div class="hero-content">
+        <div class="hero-text-container fade-in-up">
+            <h1 class="hero-title font-gilbert-color">
+                <span class="gradient-text">Oakland Pride 2026</span>
+            </h1>
+            <p class="hero-subtitle">Save the Date • September 2026</p>
+            <p class="hero-tagline">Something Bigger, Bolder, and Louder is Coming</p>
+            <div id="countdown" class="countdown-display"></div>
+            <div class="hero-cta-group">
+                <button id="confetti-button" class="btn-modern btn-primary-gradient" aria-label="Celebrate with confetti">
+                    <span>Celebrate Pride!</span>
+                    <i class="bi bi-stars"></i>
+                </button>
+                <a href="#announcements" class="btn-modern btn-outline-light">
+                    <span>Get Updates</span>
+                    <i class="bi bi-arrow-down"></i>
+                </a>
             </div>
+        </div>
     </div>
-</div>
-<div class="row my-5">
-    <div class="col col-12 col-sm-4 p-5 order-1 order-md-0">
-        <img class="img-fluid rounded" src="https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/7bfaa98e-0efc-4ed6-259f-19128f71f500/blur" alt="">
-    </div>
-    <div class="col p-5 order-0 order-md-1">
-        <h2>In Unity, We Thrive</h2>
-        <p class="lead">"In Unity, We Thrive" is a powerful <strong>theme</strong> that emphasizes the strength found in solidarity and collective action within the LGBTQ+ community and its allies. It celebrates the idea that by coming together, celebrating our diversity, and supporting one another, we can build a more vibrant and resilient community for all.</p>
-    </div>
-</div>
-<div class="row row-cols-1 row-cols-md-2 m-5">
-    <div class="col p-2">
-        <h2>Festival Map</h2>
-        <img class="img-fluid border border-2 rounded" src="https://storage.googleapis.com/oaklandpride-archive/map/OaklandPride_2025_FestivalMap_v4.png" alt="" onclick="showFullscreen(this)">
-    </div>
-    <div class="col p-2">
-        <h2>Parade Map</h2>
-        <img class="img-fluid border border-2 rounded" src="https://storage.googleapis.com/oaklandpride-archive/map/OaklandPride_2025_ParadeMap_FINAL.png" alt="" onclick="showFullscreen(this)">
-    </div>
-</div>
-<div class="row row-cols-1 row-cols-md-2 align-items-center">
-    <div class="col">
-        <a href="https://www.visitoakland.com/stay/" target="_blank">
-            <img class="img-fluid" src="/assets/stayinoakland.png" alt="">
-        </a>
-    </div>
-    <div class="col p-4">
-        <img class="img-fluid mb-3" src="/assets/visitoakland.svg" alt="Visit Oakland">
-        <p>The Visit Oakland website offers a variety of promotions and deals for hotels, making it a great resource for planning a trip. You can find information on exclusive packages and discounts for various hotel types, ranging from chic boutique hotels to family-friendly stays. For example, some offers include limited-time deals such as a "Stay the Night, Ride on Us" promotion that provides a $25 Uber credit with a one-night hotel stay. Beyond the official tourism site, other platforms like Expedia, HotelTonight, and Priceline also feature numerous hotel deals in Oakland, including last-minute and member-exclusive savings, as well as vacation packages that bundle flights and accommodations.</p>
-        <a class="btn btn-primary btn-lg" href="https://www.visitoakland.com/stay/" target="_blank">Stay in Oakland</a>
-    </div>
-</div>
+</section>
 
-{% include signup.html %}
+<!-- Announcement Section -->
+<section id="announcements" class="announcement-section fade-in-section">
+    <div class="container">
+        <div class="announcement-card glass-card">
+            <div class="announcement-icon">
+                <i class="bi bi-megaphone-fill"></i>
+            </div>
+            <h2 class="section-title">2026 Planning Underway</h2>
+            <p class="section-description">
+                We're hard at work planning an unforgettable Oakland Pride 2026! 
+                Details on dates, locations, vendors, and ticketing will be announced soon.
+            </p>
+            <div class="announcement-grid">
+                <div class="announcement-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <h3>Festival & Parade</h3>
+                    <p>September 2026 (Date TBA)</p>
+                </div>
+                <div class="announcement-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <h3>Location</h3>
+                    <p>To Be Announced</p>
+                </div>
+                <div class="announcement-item">
+                    <i class="bi bi-ticket-perforated"></i>
+                    <h3>Tickets</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Section -->
+<section class="community-section fade-in-section">
+    <div class="container">
+        <div class="content-grid">
+            <div class="content-image">
+                <img class="img-fluid rounded-modern" src="https://imagedelivery.net/MvzNvpp4M2t9qtNhV8DSHQ/7bfaa98e-0efc-4ed6-259f-19128f71f500/blur" alt="Oakland Pride community celebration" loading="lazy">
+            </div>
+            <div class="content-text">
+                <h2 class="section-title">Celebrating Our Community</h2>
+                <p class="section-description">
+                    Oakland Pride is more than just an event—it's a celebration of love, diversity, and unity. 
+                    Join us as we honor the vibrant LGBTQ+ community and allies in Oakland and beyond.
+                </p>
+                <p class="section-description">
+                    Stay tuned for updates on how you can participate, volunteer, sponsor, or become a vendor at Oakland Pride 2026.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section class="get-involved-section fade-in-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Get Involved in 2026</h2>
+        <div class="involvement-grid">
+            <div class="involvement-card glass-card">
+                <div class="card-icon">
+                    <i class="bi bi-heart-fill"></i>
+                </div>
+                <h3>Volunteer</h3>
+                <p>Help make Oakland Pride 2026 unforgettable. Volunteer opportunities will be announced soon.</p>
+                <span class="badge-coming-soon">Coming Soon</span>
+            </div>
+            <div class="involvement-card glass-card">
+                <div class="card-icon">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <h3>Vendors & Exhibitors</h3>
+                <p>Showcase your business or organization. Vendor registration opens in early 2026.</p>
+                <span class="badge-coming-soon">Coming Soon</span>
+            </div>
+            <div class="involvement-card glass-card">
+                <div class="card-icon">
+                    <i class="bi bi-flag-fill"></i>
+                </div>
+                <h3>Parade Registration</h3>
+                <p>March with pride! Parade registration details will be available soon.</p>
+                <span class="badge-coming-soon">Coming Soon</span>
+            </div>
+            <div class="involvement-card glass-card">
+                <div class="card-icon">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <h3>Sponsors</h3>
+                <p>Support Oakland Pride and reach our diverse community. Partnership opportunities available.</p>
+                <a href="/sponsors/" class="btn-text-link">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup Section -->
+<section class="newsletter-section fade-in-section">
+    <div class="container">
+        <div class="newsletter-card glass-card">
+            <h2 class="section-title text-center">Stay Updated</h2>
+            <p class="section-description text-center">
+                Be the first to know about Oakland Pride 2026 announcements, ticket sales, and volunteer opportunities.
+            </p>
+            {% include signup.html %}
+        </div>
+    </div>
+</section>
+
+<!-- Sponsors Section -->
 {% include sponsors.html %}
+
+<!-- Pride Stripe Footer -->
+<div class="pride-stripe-footer"></div>
 </div>
