@@ -1,6 +1,6 @@
 title: Oakland Pride
 email: info@oaklandpride.org
-description: Celebrating the LGBTQ+ community in Oakland, California. Save the date for Oakland Pride 2026!
+description: Celebrating the LGBTQ+ community in Oakland, California. Oakland Pride 2026 is proudly produced by the Oakland LGBTQ Community Center.
 baseurl: ""
 url: "oaklandpride.org"
 website: https://oaklandpride.org
@@ -11,6 +11,7 @@ permalink: /:categories/:year/:month/:day/:title/
 
 pride-theme: "Coming Soon 2026"
 eventdates: "September 2026 - Date TBA"
+producer: "Oakland LGBTQ Community Center"
 
 # Build settings
 plugins:
