@@ -1,6 +1,6 @@
 source "https://rubygems.org"
-gem "jekyll"
-gem "bootstrap"
+gem "github-pages", group: :jekyll_plugins
+# gem "bootstrap" # Using CDN link in layout instead
 
 group :jekyll_plugins do
   gem "jekyll-feed"
