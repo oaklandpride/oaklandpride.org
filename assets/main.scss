@@ -1121,6 +1121,25 @@ section {
       color: rgba(255, 255, 255, 0.7);
       font-size: 1rem;
     }
+
+    .footer-github-link {
+      color: rgba(255, 255, 255, 0.6) !important;
+      font-size: 0.9rem;
+      transition: all var(--transition-base);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      i {
+        font-size: 1.15rem;
+      }
+      
+      &:hover {
+        color: white !important;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+      }
+    }
   }
 }
 
